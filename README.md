@@ -1,7 +1,10 @@
 # dockerSimpleFetchWeather
 A simple application consisting of 3 components that demonstrates containerization of application modules, 
 and how to deploy distributed applications as a Docker stack. 
-Please go through my Medium post here to understand the concept: <>
+
+Please go through my Medium post here to read about this application in detail: 
+https://medium.com/@tukai.anirban/docker-how-to-make-a-simple-containerized-application-90c45e2ab2ff
+
 
 To run the application:
 1. create a docker swarm using 
