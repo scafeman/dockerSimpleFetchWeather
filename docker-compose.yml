@@ -1,0 +1,25 @@
+version: '3'
+services:
+        web:
+                image: "weather-web:v1"
+                ports:
+                        - "5002:80"        
+                networks:
+                        - "webnet"
+                depends_on:
+                        - "bus"
+                        - "fetcher"
+        fetcher:
+                image: "weather-fetcher:v1"
+                networks:
+                        - "backnet"
+                depends_on:
+                        - "bus"
+        bus:
+                image: "rabbitmq:3"
+                networks:
+                        - "backnet"
+                        - "webnet"
+networks:
+        webnet:
+        backnet:
